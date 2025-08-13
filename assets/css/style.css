@@ -442,10 +442,7 @@
   justify-content: space-between;
   gap: 10px;
 }
-.content-active {
-  display: grid;
-  animation: floatUp 0.9s ease;
-}
+
 @keyframes floatUp {
   0% {
     transform: translateY(100px);
@@ -492,6 +489,16 @@
   opacity: 1;
   transition: opacity 0.3s ease;
 }
+.chosen-tab {
+  background-color: #fbca00;
+  color: #000;
+}
+.chosen-tab::after {
+  opacity: 1;
+}
+.chosen-tab > img {
+  filter: brightness(0);
+}
 /* SERVICE TAB CONTENT */
 .hm-service-content-ctnr {
   background-color: #fbca00;
@@ -501,6 +508,10 @@
   padding: 40px;
   margin-top: 40px;
   border-radius: 10px;
+}
+.content-active {
+  display: grid;
+  animation: floatUp 0.9s ease;
 }
 .hm-service-card {
   display: flex;
@@ -549,11 +560,19 @@
   }
   .hm-service-content-ctnr {
     grid-template-columns: 1fr;
+    padding: 30px;
+    margin-top: 28px;
   }
   
 }
 @media screen and (max-width: 480px) {
   .hm-service-content-ctnr {
     padding: 24px 10px;
+  }
+  .hm-service-card {
+    padding: 15px;
+  }
+  .service-tab {
+    padding: 11px 0;
   }
 }

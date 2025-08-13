@@ -7,28 +7,21 @@ document.addEventListener("DOMContentLoaded", () => {
     tab.addEventListener("click", () => {
       const tabId = tab.id;
 
-      // tabs.forEach((t) => {
-      //   if (t.id === tabId) {
-      //     t.classList.add("chosen-tab");
-      //   } else {
-      //     t.classList.remove("chosen-tab");
-      //   }
+      tabs.forEach((t) => {
+        if (t.id === tabId) {
+          t.classList.add("chosen-tab");
+        } else {
+          t.classList.remove("chosen-tab");
+        }
+      });
 
-      //   // const serviceContent = document.querySelector( `.content-for-${tabId}`);
-      //   // if (t.classList.contains("chosen-tab")) {
-      //   //   serviceContent.classList.add("content-active");
-      //   // } else {
-      //   //   serviceContent.classList.remove("content_active");
-      //   // }
-      // });
-
-      serviceContents.forEach(content) {
+      serviceContents.forEach((content) => {
         if(content.classList.contains(`content-for-${tabId}`)) {
           content.classList.add("content-active");
         } else {
           content.classList.remove("content-active");
-        }
-      }
+        };
+      })
     });
   });
 });
