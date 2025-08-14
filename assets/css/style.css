@@ -1014,3 +1014,9 @@
 .hm-member-article .msg {
   display: inline-block;
 }
+
+.hm-member-profile-ctnr {
+  display: flex;
+  max-width: 420px;
+  gap: 20px;
+}
