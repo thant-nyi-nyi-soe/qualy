@@ -95,7 +95,8 @@ FOOTER
 =============================== */
 
 .footer-wrapper {
-  background-color: #7A7A7A;
+  background-color: #7a7a7a;
+  position: relative;
 }
 .footer {
   max-width: 900px;
@@ -108,7 +109,7 @@ FOOTER
   align-items: center;
 }
 .footer-contact-btn {
-  background-color: #FECA01;
+  background-color: #feca01;
   height: 40px;
   width: 160px;
   display: flex;
@@ -122,17 +123,117 @@ FOOTER
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
-.ftr-content-ctnr h4 {
+.ftr-topic {
+  flex: 0 1 200px;
+}
+.ftr-topic h4 {
   text-align: center;
   font-size: 1.25rem;
   font-weight: 700;
   color: #fff;
   margin-bottom: 10px;
 }
-.ftr-content-ctnr p {
+.ftr-topic p {
   text-align: center;
   font-size: calc(10 / 16 * 1rem);
   font-weight: 700;
   color: #fff;
+}
+.ftr-topic .hor-line {
+  height: 3px;
+  max-width: 860px;
+  width: 100%;
+  background-color: #fff;
+  margin: 10px 0;
+}
+.ftr-topic-options p {
+  margin-bottom: 10px;
+  text-align: start;
+  padding-left: 18px;
+  position: relative;
+}
+.ftr-topic-options p::before {
+  content: "";
+  background-image: url(../images/footer/right_arrow.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  height: 8px;
+  width: 10px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sp-btn {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .ftr-content-ctnr {
+    flex-direction: column;
+  }
+  .ftr-topic {
+    max-width: 200px;
+    width: 100%;
+    flex: unset;
+  }
+  .pc-btn {
+    display: none;
+  }
+  .sp-btn {
+    display: flex;
+  }
+}
+
+.back-to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 100px;
+  z-index: 1000;
+  background-color: #000;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.no-back-to-top {
+  display: none;
+}
+.above-footer {
+  position: absolute;
+  top: -90px;
+}
+.back-to-top-btn p {
+  display: none;
+  color: #fff;
+  padding-top: 5px;
+  font-size: calc(10 / 16 * 1rem);
+  font-weight: 700;
+  text-align: center;
+}
+@media screen and (max-width: 1000px) {
+  .back-to-top-btn {
+    right: 30px;
+    transform: translateY(-50%);
+    justify-content: end;
+    padding-bottom: 15px;
+    height: 70px;
+    width: 70px;
+  }
+  .above-footer {
+    top: 0;
+  }
+  .back-to-top-btn img {
+    height: 10px;
+  }
+  .back-to-top-btn p {
+    display: block;
+  }
 }
