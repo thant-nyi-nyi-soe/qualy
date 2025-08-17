@@ -54,11 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Your jQuery code goes here
 $(function () {
-  // Your code here
-  //   $("button").on("click", () => {
-  //     console.log("Hello");
-  //   });
-
+  
+// TOP SLIDER
   $(".top-slider").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -76,7 +73,9 @@ $(function () {
           slidesToShow: 1,
           slidesToScroll: 1,
           dots: true,
+          infinite: true,
           centerMode: true,
+          centerPadding: "calc((100% - 380px) / 2)",
         },
       },
       {
