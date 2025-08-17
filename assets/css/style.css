@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+* {
+  border: solid 1px red;
+}
+
 .top-section-wrapper {
   position: relative;
   max-width: 1280px;
@@ -399,21 +403,32 @@
 }
 
 /* DISOUNT CARDS SECTION */
-
-/* HOME SERVICE SECTION */
 .discount-cards-slider {
-  max-width: 1120px;
+  max-width: 1020px;
   margin: 0 auto;
-  padding: 100px 0 0;
+  padding: 100px 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.discount-cards-slider .slick-track {
+  display: flex;
+  gap: 40px; /* space between slides */
 }
 .discount-card {
-  margin: 0 20px;
+  max-width: fit-content;
 }
-@media screen and (max-width: 768px) {
-  .discount-card {
-    margin: 0 10px;
+.discount-card img {
+  height: 160px;
+}
+@media screen and (max-width: 900px) {
+  .discount-cards-slider {
+    gap: 20px;
   }
 }
+
+
+/* HOME SERVICE SECTION */
 .hm-service-section {
   max-width: 900px;
   margin: 0 auto;

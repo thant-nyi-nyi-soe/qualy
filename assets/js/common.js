@@ -66,31 +66,23 @@ $(function () {
     dots: true,
   });
 
-  // $(".discount-cards-slider").slick({
-  //   slidesToShow: 3,
-  //   centerMode: true,
-  //   centerPadding: "60px",
-  //   responsive: [
-  //     {
-  //       breakpoint: 768,
-  //       settings: {
-  //         arrows: false,
-  //         dots: true,
-  //         centerMode: true,
-  //         centerPadding: "40px",
-  //         slidesToShow: 2
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 480,
-  //       settings: {
-  //         arrows: true,
-  //         dots: true,
-  //         centerMode: true,
-  //         centerPadding: "40px",
-  //         slidesToShow: 1
-  //       },
-  //     }
-  //   ],
-  // });
+  // DISCOUT CARDS SLIDER
+  $(".discount-cards-slider").slick({
+    responsive: [
+      
+      {
+        breakpoint: 768, 
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          centerMode: true,
+        },
+      },
+      {
+        breakpoint: 9999, 
+        settings: "unslick",
+      },
+    ],
+  });
 });
