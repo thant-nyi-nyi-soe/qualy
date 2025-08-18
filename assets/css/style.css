@@ -980,8 +980,6 @@
   top: 50%;
   transform: translateY(-50%);
 }
-.hm-contact-info {
-}
 .hm-phnum-line {
   flex: 3;
   display: flex;
@@ -989,7 +987,16 @@
   gap: 10px;
   align-items: center;
 }
+.hm-phnum-line p {
+  font-family: "europa", sans-serif;
+  font-size: calc(30 / 16 * 1rem);
+  font-weight: 700;
+}
 @media screen and (max-width: 768px) {
+  .hm-contact-section {
+    padding: 51px 0 47px;
+  }
+  
   .hm-contact-cards-ctnr > h2 {
     font-size: calc(60 / 16 * 1rem);
   }
@@ -1013,6 +1020,10 @@
     position: absolute;
     max-height: 22px;
   }
+  .hm-contact-text {
+    font-size: 0.75rem;
+    padding: 24px 15px;
+  }
   .hm-contact-ctnr {
     flex-direction: column;
     gap: 24px;
@@ -1023,6 +1034,10 @@
     text-align: start;
     width: 100%;
   }
+  .hm-contact-info > p {
+    padding-left: 32px;
+    font-weight: 600;
+  }
 }
 @media screen and (max-width: 480px) {
   .hm-contact-cards-ctnr > h2 {
@@ -1031,6 +1046,11 @@
   .hm-contact-cards-ctnr .no-border {
     max-width: 255px;
   }
+  
+  .hm-contact-ctnr {
+    padding: 0 15px;
+  }
+  
 }
 
 /* HOME NEWS SECTION */

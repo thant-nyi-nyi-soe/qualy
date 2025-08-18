@@ -111,12 +111,12 @@ HEADER
   height: 100%;
   padding-top: 45px;
   padding-bottom: 230px;
+  background-color: #F5F5F5;
   padding-left: 88px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
-  z-index: 1;
 }
 .header > a > img {
   max-height: 40px;
