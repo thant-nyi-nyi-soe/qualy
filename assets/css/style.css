@@ -128,19 +128,81 @@
 }
 .discount-cards-slider .slick-track {
   display: flex;
-  gap: 40px; /* space between slides */
+  gap: 40px; 
+}
+
+.discount-cards-slider .slick-arrow::before {
+  color: transparent;
+  background-image: url(../images/index/discount/right_arrow.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 8px;
+  width: 11px;
+  display: block;
 }
 .discount-card {
-  max-width: fit-content;
+  width: 300px;
 }
-.discount-card img {
-  height: 160px;
+
+.discount-cards-slider .slick-arrow {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #000;
+  position: absolute;
+  border: solid 2px #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.discount-cards-slider .slick-next {
+  right: 20px;
+  top: 65%;
+  z-index: 1;
+}
+.discount-cards-slider .slick-prev {
+  left: 20px;
+  top: 65%;
+  z-index: 1;
+}
+.discount-cards-slider .slick-prev::before {
+  transform: rotate(180deg);
+}
+.discount-cards-slider .slick-dots {
+  bottom: -34px;
+}
+.discount-cards-slider .slick-dots button::before {
+  content: "";
+  height: 12px;
+  width: 12px;
+  background-color: #7A7A7A;
+  border-radius: 50%;
+  position: unset;
+  display: block;
+}
+.discount-cards-slider .slick-active button{
+  height: 24px;
+  width: 24px;
+  border: solid 2px #fbca00;
+  border-radius: 50%;
+}
+.discount-cards-slider .slick-active button::before {
+  background-color: #fbca00;
 }
 @media screen and (max-width: 900px) {
   .discount-cards-slider {
     gap: 20px;
   }
 }
+@media screen and (max-width: 768px) {
+  .discount-cards-slider {
+    padding: 71px 0 0;
+  }
+  .discount-cards-slider .slick-track {
+    gap: 20px;
+  }
+}
+
 
 /* HOME SERVICE SECTION */
 .hm-service-section {
@@ -1139,7 +1201,38 @@
   font-weight: 700;
   color: #FECA00;
 }
+
+.hm-news-btn-wrapper {
+  padding: 40px 0 100px;
+}
+.hm-news-btn {
+  border-radius: 25px;
+  max-width: 300px;
+  margin: 0 auto;
+  height: 50px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: start;
+  padding-left: 20px;
+  align-items: center;
+  position: relative;
+}
+.hm-news-btn::after {
+  content: "";
+  background-image: url(../images/index/contact/right_arrow_3.png);
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  filter: invert(1);
+}
 @media screen and (max-width: 768px) {
+  .hm-news-btn-wrapper {
+  padding: 36px 0 80px;
+}
   .hm-news-section {
     margin: 71px auto 0;
   }

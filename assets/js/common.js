@@ -66,16 +66,17 @@ $(function () {
   // DISCOUT CARDS SLIDER
   $(".discount-cards-slider").slick({
     responsive: [
-      
       {
         breakpoint: 768, 
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
           dots: true,
+          arrows: true,
           infinite: true,
           centerMode: true,
           centerPadding: "calc((100% - 380px) / 2)",
+          variableWidth: true,
         },
       },
       {
