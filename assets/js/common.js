@@ -56,13 +56,12 @@ document.addEventListener("DOMContentLoaded", () => {
 $(function () {
   
   // TOP SLIDER
-  $(".top-slider").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    dots: true,
-  });
-
+ $('.top-slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  dots: true
+});
   // DISCOUnT CARDS SLIDER
   $(".discount-cards-slider").slick({
     responsive: [
