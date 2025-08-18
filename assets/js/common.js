@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Your jQuery code goes here
 $(function () {
   
-// TOP SLIDER
+  // TOP SLIDER
   $(".top-slider").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -63,7 +63,7 @@ $(function () {
     dots: true,
   });
 
-  // DISCOUT CARDS SLIDER
+  // DISCOUnT CARDS SLIDER
   $(".discount-cards-slider").slick({
     responsive: [
       {

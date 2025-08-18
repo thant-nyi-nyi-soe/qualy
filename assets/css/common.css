@@ -231,21 +231,26 @@ HEADER
   margin-top: 0;
 }
 
-
 /* TOP SLIDER SECTION */ 
 .top-slider {
-  max-width: 75%;
-  margin-left: 25%;
-  height: 550px;
+  position: absolute;
+  right: 0;
+  width: 75%;
 }
-/* .top-slider .slick-dots {
-  display: flex;
-  align-items: start;
-  padding-left: 115px;
-} */
 .top-slide {
   position: relative;
-  height: 100%;
+  width: 100%;
+  height: 550px;
+  border-bottom-left-radius: 15px;
+}
+.top-slide-blue {
+  background-color: #3156DF
+}
+.top-slide-pale {
+  background-color: #FFE995
+}
+.top-slide-yellow {
+  background-color: #FFCD0D;
 }
 .top-bg {
   position: absolute;
