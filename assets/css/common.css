@@ -410,7 +410,6 @@ FOOTER
   width: 25px;
   height: 25px;
   display: block;
-  filter: invert();
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -424,7 +423,6 @@ FOOTER
   display: none;
   width: 25px;
   height: 25px;
-  filter: invert();
   border-radius: 50%;
   position: absolute;
   top: 50%;
