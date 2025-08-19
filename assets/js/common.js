@@ -62,6 +62,18 @@ document.addEventListener("DOMContentLoaded", () => {
       toTop.classList.remove("above-footer");
     }
   });
+
+  // FOOTER TOGGLES
+
+  const ftrToggles = document.querySelectorAll(".arrow-left-side");
+
+  console.log(ftrToggles.innerHTML);
+
+  ftrToggles.forEach((arrow) => {
+    arrow.addEventListener("click", () => {
+      arrow.classList.toggle("arrow-hide");
+    });
+  });
 });
 
 // Your jQuery code goes here
