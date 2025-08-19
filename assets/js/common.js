@@ -1,5 +1,16 @@
 // Your JavaScript code goes here
 document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".header-ctnr");
+
+  window.addEventListener("scroll", () => {
+    const header = document.querySelector(".header-ctnr");
+    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+      header.style.display = "flex";
+    } else {
+      header.style.display = "none";
+    }
+  });
+
   const tabs = document.querySelectorAll(".service-tab");
   const serviceContents = document.querySelectorAll(".hm-service-content-ctnr");
 
@@ -25,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // MAKE BACK TO TOP BUTTON DISAPPER AT THE TOP OF THE PAGE
   window.addEventListener("scroll", () => {
     const toTop = document.querySelector(".back-to-top-btn");
     if (
@@ -54,19 +66,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Your jQuery code goes here
 $(function () {
-  
   // TOP SLIDER
- $('.top-slider').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: false,
-  dots: true
-});
+  $(".top-slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+  });
   // DISCOUnT CARDS SLIDER
   $(".discount-cards-slider").slick({
     responsive: [
       {
-        breakpoint: 768, 
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -79,7 +90,7 @@ $(function () {
         },
       },
       {
-        breakpoint: 9999, 
+        breakpoint: 9999,
         settings: "unslick",
       },
     ],
