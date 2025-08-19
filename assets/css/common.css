@@ -298,7 +298,7 @@ FOOTER
 }
 .footer-below div {
   max-width: 1315px;
-  margin:0 auto;
+  margin: 0 auto;
   color: #fff;
   height: 100%;
   width: 100%;
@@ -361,6 +361,7 @@ FOOTER
   position: absolute;
   top: -90px;
 }
+
 .back-to-top-btn p {
   display: none;
   color: #fff;
@@ -386,5 +387,144 @@ FOOTER
   }
   .back-to-top-btn p {
     display: block;
+  }
+}
+
+/* CONTACT BANNER SECTION */
+
+.contact-banner-section {
+  position: fixed;
+  bottom: 105px;
+  right: 40px;
+  max-width: 380px;
+  width: 100%;
+  max-height: 180px;
+  z-index: 10;
+  border: solid 2px #feca00;
+  border-radius: 10px;
+}
+.contact-banner-cards-ctnr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  background-color: #fffbef;
+  padding: 30px 0 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: relative;
+}
+.top-con-exit-btn {
+  width: 50px;
+  position: absolute;
+  top: -25px;
+  right: -25px;
+}
+.contact-banner-cards-ctnr > h2 {
+  position: absolute;
+  top: -30px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: 0 20px;
+}
+.contact-banner-cards-ctnr > span {
+  display: block;
+  height: 10px;
+  background-color: #fffbef;
+  transform: translateY(-11px);
+}
+.no-border {
+  height: 5px;
+  width: 250px;
+  background: #fffbef;
+  display: block;
+  position: absolute;
+  top: -1.5px;
+}
+.contact-banner-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 72px;
+}
+.contact-banner-card .icon-group {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+}
+.contact-banner-card .icon-group .circle {
+  position: absolute;
+}
+.contact-banner-card .icon-group .icon {
+  position: absolute;
+  max-height: 30px;
+}
+.contact-banner-card p {
+  margin-top: 4px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+.contact-main-button {
+  background-color: #feca01;
+  max-height: 43px;
+  text-align: center;
+  padding: 14px 0;
+
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: calc(15 / 16 * 1rem);
+  font-weight: 700;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: relative;
+}
+.contact-main-button::before {
+  content: "";
+  background-image: url(../images/index/contact_male_icon.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 105px;
+  width: 105px;
+  position: absolute;
+  bottom: -12px;
+  left: -15px;
+  z-index: 1;
+}
+.contact-main-button::after {
+  content: "";
+  background-image: url(../images/index/contact_female_icon.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 90px;
+  width: 90px;
+  position: absolute;
+  bottom: -12px;
+  right: -15px;
+  z-index: 1;
+}
+.banner-above-footer {
+  position: absolute;
+  top: -320px;
+}
+.banner-removed {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .contact-banner-section {
+    max-width: 315px;
+  }
+  .contact-main-button::before{
+    height: 80px;
+    width: 80px;
+  }
+  .contact-main-button::after{
+    height: 70px;
+    width: 70px;
+  }
+  .contact-banner-cards-ctnr {
+    gap: 30px;
   }
 }

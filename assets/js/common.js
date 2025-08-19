@@ -74,6 +74,35 @@ document.addEventListener("DOMContentLoaded", () => {
       arrow.classList.toggle("arrow-hide");
     });
   });
+
+  //MAKE BANNER STICK TO THE TOP OF THE FOOTER
+
+  window.addEventListener("scroll", () => {
+    const banner = document.querySelector(".contact-banner-section");
+    const footer = document.querySelector(".footer-wrapper");
+    const footerTop = footer.getBoundingClientRect().top;
+    const winHeight = window.innerHeight;
+
+    if (footerTop < winHeight) {
+      banner.classList.add("banner-above-footer");
+    } else {
+      banner.classList.remove("banner-above-footer");
+    }
+  });
+
+  // // MAKE BANNER EXIT BUTTON INTERACTIVE
+
+  // const exit = document.querySelector(".top-con-exit-btn");
+  // console.log(exit);
+
+  // if (exit) {
+  //   exit.addEventListener("click", () => {
+  //     const banner = document.querySelector(".contact-banner-section");
+  //     if (banner) {
+  //       banner.classList.add("banner-removed");
+  //     }
+  //   });
+  // }
 });
 
 // Your jQuery code goes here
@@ -85,7 +114,7 @@ $(function () {
     arrows: false,
     dots: true,
   });
-  // DISCOUnT CARDS SLIDER
+  // DISCOUNT CARDS SLIDER
   $(".discount-cards-slider").slick({
     responsive: [
       {
