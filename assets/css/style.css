@@ -1803,7 +1803,7 @@ CONTACT SECTION
 }
 @media screen and (max-width: 768px) {
   .contact-wrapper {
-    padding: 140px 15px 80px;
+    padding: 140px 0 80px;
   }
   .inputs-ctnr {
     padding: 36px 15px;
