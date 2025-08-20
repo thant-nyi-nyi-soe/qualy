@@ -1531,7 +1531,7 @@ NEWS PAGE
 .news-ctnr {
   max-width: 900px;
   margin: 0 auto;
-  padding: 100px 20px;
+  padding: 160px 20px 100px;
 }
 .news-ctnr > h1 {
   font-family: "europa", sans-serif;
@@ -1653,11 +1653,11 @@ NEWS PAGE
 }
 @media screen and (max-width: 768px) {
   .news-ctnr > h1 {
-  font-size: 2.5rem;
-  margin-right: 10px;
-}
-.news-ctnr > h4 {
-}
+    font-size: 2.5rem;
+    margin-right: 10px;
+  }
+  .news-ctnr > h4 {
+  }
   .news-ctnr .hor-line {
     margin: 21px auto 24px;
   }
@@ -1666,5 +1666,152 @@ NEWS PAGE
   .news-cards-ctnr {
     grid-template-columns: 1fr;
     max-width: 300px;
+  }
+}
+
+/*=========================
+CONTACT SECTION
+============================*/
+
+.contact-wrapper {
+  padding: 160px 20px 100px;
+}
+.contact-ctnr {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.contact-ctnr > h1 {
+  font-family: "europa", sans-serif;
+  font-size: 5rem;
+  color: #fbca00;
+  font-weight: 700;
+  display: inline-block;
+  margin-right: 20px;
+}
+.contact-ctnr > h4 {
+  font-weight: 600;
+  color: #000;
+  display: inline-block;
+}
+.contact-ctnr .hor-line {
+  height: 3px;
+  max-width: 860px;
+  width: 100%;
+  background-color: #feca00;
+  margin: 45px auto 40px;
+}
+.contact-ctnr > p {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: calc(1 + 10 / 14);
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .contact-btn-wrapper {
+    padding: 36px 0 80px;
+  }
+  .contact-ctnr > h1 {
+    font-size: 2.5rem;
+    margin-right: 10px;
+  }
+  .contact-ctnr {
+    padding: 0 15px;
+  }
+  .contact-ctnr .hor-line {
+    margin: 21px 0 24px;
+  }
+}
+
+.inputs-ctnr {
+  background-color: #f5f5f5;
+  padding: 40px 100px;
+  border-radius: 10px;
+}
+.company-input,
+.name-input {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: end;
+}
+.inputs-ctnr p {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #000;
+}
+.inputs-ctnr span {
+  font-size: calc(10 / 16 * 1rem);
+  font-weight: 500;
+  color: #fd0100;
+  border: solid 1px #fd0100;
+  border-radius: 10px;
+  padding: 2px;
+  margin-left: 10px;
+}
+.company-input input,
+.name-input input {
+  margin-top: 10px;
+}
+
+.radios-ctnr {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  row-gap: 24px;
+}
+.radio-input {
+  margin-top: 24px;
+}
+.radio-input input {
+  margin: 0;
+}
+.name-input {
+  margin-top: 48px;
+}
+.input-common {
+  margin-top: 24px;
+}
+.mail-input input::placeholder {
+  font-family: "europa", sans-serif;
+}
+.input-common input {
+  width: 100%;
+  padding: 12px 0 12px 20px;
+  border-radius: 4px;
+  border: solid 1px #d1d1d1;
+  margin-top: 10px;
+}
+.input-common input::placeholder {
+  opacity: 18%;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.details-input input {
+  padding-bottom: 90px;
+}
+.checkbox-input {
+  margin-top: 24px;
+}
+.checkbox-input .checkboxes-ctnr p {
+  margin-top: 15px;
+}
+.checkbox-input .checkboxes-ctnr span {
+  border: none;
+}
+@media screen and (max-width: 768px) {
+  .contact-wrapper {
+    padding: 140px 15px 80px;
+  }
+  .inputs-ctnr {
+    padding: 36px 15px;
+  }
+  .company-input {
+    grid-template-columns: 1fr;
+  }
+  .last-radio {
+    width: 300px;
   }
 }

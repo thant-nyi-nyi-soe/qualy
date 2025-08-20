@@ -337,6 +337,8 @@ FOOTER
   }
   .sp-btn {
     display: flex;
+    max-width: 100%;
+    width: 100%;
   }
 }
 
@@ -344,7 +346,7 @@ FOOTER
   position: fixed;
   bottom: 20px;
   right: 100px;
-  z-index: 1000;
+  z-index: 1;
   background-color: #000;
   height: 50px;
   width: 50px;
