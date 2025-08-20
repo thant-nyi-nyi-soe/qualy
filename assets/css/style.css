@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-
 .top-ctnr {
   max-width: 1280px;
   height: 720px;
@@ -172,10 +171,11 @@
   transform: rotate(180deg);
 }
 .top-slider .slick-dots {
-  bottom: -34px;
+  position: unset;
   display: flex;
   align-items: start;
   padding-left: 15%;
+  padding-top: 10px;
 }
 .top-slider .slick-dots button::before {
   content: "";
@@ -385,8 +385,6 @@
     width: 100%;
   }
 }
-
-
 
 /* DISOUNT CARDS SECTION */
 .discount-cards-slider {
@@ -1523,14 +1521,12 @@
   }
 }
 
-
-
 /*=======================
 NEWS PAGE
 =======================*/
 .news-wrapper {
   width: 100%;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 .news-ctnr {
   max-width: 900px;
@@ -1557,7 +1553,6 @@ NEWS PAGE
   background-color: #fbca00;
   margin: 45px auto 40px;
 }
-
 .news-cards-ctnr {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -1574,7 +1569,7 @@ NEWS PAGE
   width: 100%;
 }
 .news-card .logo-bg {
-  width: 260px;
+  width: 100%;
   height: 180px;
   background: #e8e8e8;
   border-radius: 10px;
@@ -1614,4 +1609,62 @@ NEWS PAGE
   line-height: 1.75;
   font-weight: 700;
   color: #feca00;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  gap: 10px;
+}
+.pagination > * {
+  border-radius: 50%;
+  border: none;
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.current-page {
+  background-color: #000;
+  color: #fff;
+}
+.pagination span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #000;
+  border-radius: 50%;
+}
+@media screen and (max-width: 900px) {
+  .news-cards-ctnr {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 40px;
+    max-width: 610px;
+    margin: 0 auto;
+  }
+  .news-card {
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .news-ctnr > h1 {
+  font-size: 2.5rem;
+  margin-right: 10px;
+}
+.news-ctnr > h4 {
+}
+  .news-ctnr .hor-line {
+    margin: 21px auto 24px;
+  }
+}
+@media screen and (max-width: 610px) {
+  .news-cards-ctnr {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+  }
 }

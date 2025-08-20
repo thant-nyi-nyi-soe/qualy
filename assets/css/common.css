@@ -373,7 +373,6 @@ FOOTER
 @media screen and (max-width: 1000px) {
   .back-to-top-btn {
     right: 30px;
-    transform: translateY(-50%);
     justify-content: end;
     padding-bottom: 15px;
     height: 70px;
@@ -381,6 +380,7 @@ FOOTER
   }
   .above-footer {
     top: 0;
+    transform: translateY(-50%);
   }
   .back-to-top-btn img {
     height: 10px;
@@ -414,11 +414,13 @@ FOOTER
   border-top-right-radius: 10px;
   position: relative;
 }
-.top-con-exit-btn {
-  width: 50px;
+.banner-exit-btn {
+  border: none;
+  background-color: transparent;
   position: absolute;
   top: -25px;
   right: -25px;
+  border-radius: 50%;
 }
 .contact-banner-cards-ctnr > h2 {
   position: absolute;
@@ -515,6 +517,7 @@ FOOTER
 @media screen and (max-width: 768px) {
   .contact-banner-section {
     max-width: 315px;
+    right: 30px;
   }
   .contact-main-button::before{
     height: 80px;
