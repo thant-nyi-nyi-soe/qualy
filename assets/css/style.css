@@ -581,7 +581,7 @@
 .hm-service-card {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   gap: 20px;
   width: 100%;
   background-color: #fff;
