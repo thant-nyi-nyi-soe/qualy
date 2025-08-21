@@ -181,8 +181,19 @@ document.addEventListener("DOMContentLoaded", () => {
   // // Initialize
   // showPage(currentPage);
   // renderPagination();
-  // } 
+  // }
 
+  const pagBtns = document.querySelectorAll(".pag-btns");
+
+  pagBtns.forEach((pagBtn) => {
+    pagBtn.addEventListener("click", () => {
+      pagBtns.forEach((i) => {
+        i.classList.remove("current-page");
+      });
+      pagBtn.classList.add("current-page");
+    });
+  });
+  
 });
 
 // Your jQuery code goes here

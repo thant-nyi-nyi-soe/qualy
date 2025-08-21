@@ -119,10 +119,25 @@ HEADER
   font-weight: 700;
   color: #fff;
   text-align: center;
+  position: relative;
 }
 .header-menu span {
   font-size: 10px;
   font-weight: 500;
+}
+.header-menu a:first-child:after {
+  content: "";
+  background-image: url(../images/index/menu_plus.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top:25%;
+  left: calc(100% + 16.5px);
+  transform: translateY(-50%);
+  width: 3px;
+  height: 16px;
+  z-index: 2;
+  padding-right: 50px;
 }
 .header-contact-btn {
   background-color: #feca01;
@@ -532,4 +547,21 @@ FOOTER
   .contact-banner-cards-ctnr {
     gap: 30px;
   }
+}
+
+
+/*==================
+BREADCRUMB
+===================*/
+.breadcrumb {
+  margin-bottom: 68px;
+}
+.breadcrumb *{
+  font-family: "europa", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-block;
+}
+.breadcrumb li:first-child a {
+  color: #BFBFBF;
 }
