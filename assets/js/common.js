@@ -183,17 +183,26 @@ document.addEventListener("DOMContentLoaded", () => {
   // renderPagination();
   // }
 
-  const pagBtns = document.querySelectorAll(".pag-btns");
+  const pagiBtns = document.querySelectorAll(".pag-btns");
 
-  pagBtns.forEach((pagBtn) => {
+  pagiBtns.forEach((pagBtn) => {
     pagBtn.addEventListener("click", () => {
-      pagBtns.forEach((i) => {
+      pagiBtns.forEach((i) => {
         i.classList.remove("current-page");
       });
       pagBtn.classList.add("current-page");
     });
   });
-  
+
+  const headerService = document.querySelector(".header-service");
+  const dropdown = document.querySelector(".service-dropdown");
+
+  if (headerService) {
+    headerService.addEventListener("click", () => {
+      console.log("clicked")
+      dropdown.style.display = "flex";
+    });
+  }
 });
 
 // Your jQuery code goes here

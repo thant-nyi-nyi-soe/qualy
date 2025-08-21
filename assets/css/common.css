@@ -119,24 +119,28 @@ HEADER
   font-weight: 700;
   color: #fff;
   text-align: center;
+}
+.header-service {
   position: relative;
+}
+.header-service:hover .service-dropdown {
+  display: flex;
 }
 .header-menu span {
   font-size: 10px;
   font-weight: 500;
 }
-.header-menu a:first-child:after {
+.header-service:after {
   content: "";
   background-image: url(../images/index/menu_plus.png);
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  top:25%;
-  left: calc(100% + 16.5px);
+  top: 25%;
+  left: calc(100% + 12px);
   transform: translateY(-50%);
-  width: 3px;
   height: 16px;
-  z-index: 2;
+  z-index: 1;
   padding-right: 50px;
 }
 .header-contact-btn {
@@ -177,6 +181,9 @@ HEADER
 @media screen and (max-width: 1024px) {
   .header-menu {
     gap: 20px;
+  }
+  .header-service:after {
+    left: calc(100% + 2px);
   }
 }
 @media screen and (max-width: 768px) {
