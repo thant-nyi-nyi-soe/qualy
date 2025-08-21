@@ -1,18 +1,16 @@
 // Your JavaScript code goes here
 document.addEventListener("DOMContentLoaded", () => {
   // MAKER HEADER DISAPPER AT THE TOP OF THE PAGE
+
   const header = document.querySelector(".header-ctnr");
 
-  window.addEventListener("scroll", () => {
-    const header = document.querySelector(".header-ctnr");
-    if (window.location.href.includes("index")) {
-      if (window.scrollY === 0) {
-        header.style.display = "none";
-      } else {
-        header.style.display = "flex";
-      }
-    }
-  });
+  if (header) {
+    if (window.location.pathname.endsWith("index.html")) {
+    header.style.display = "none";
+  } else {
+    header.style.display = "flex";
+  }
+  }
 
   const tabs = document.querySelectorAll(".service-tab");
   const serviceContents = document.querySelectorAll(".hm-service-content-ctnr");
@@ -46,9 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.scrollTop > 200 ||
       document.documentElement.scrollTop > 200
     ) {
-      toTop.classList.remove("no-back-to-top");
+      toTop.classList.add("show-back-to-top");
     } else {
-      toTop.classList.add("no-back-to-top");
+      toTop.classList.remove("show-back-to-top");
     }
   });
 
@@ -199,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (headerService) {
     headerService.addEventListener("click", () => {
-      console.log("clicked")
+      console.log("clicked");
       dropdown.style.display = "flex";
     });
   }
