@@ -327,7 +327,7 @@ FOOTER
   text-align: start;
   padding-left: 18px;
   position: relative;
-  font-size: calc(10 / 16 * 1rem);
+  font-size: calc(12 / 16 * 1rem);
   font-weight: 700;
   color: #fff;
 }
@@ -354,7 +354,7 @@ FOOTER
   height: 80px;
 }
 .footer-below div {
-  max-width: 1315px;
+  max-width: 900px;
   margin: 0 auto;
   color: #fff;
   height: 100%;
