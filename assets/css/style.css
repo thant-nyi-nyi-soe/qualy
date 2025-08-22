@@ -526,12 +526,11 @@
   display: flex;
   align-items: center;
   text-align: center;
-  gap: 20px;
-  justify-content: center;
+  gap: 12px;
   background-color: #fff;
   border: solid 2px #ffea99;
   border-radius: 10px;
-  padding: 20px 23px;
+  padding: 20px 22px;
   color: #fbca00;
 
   font-size: 1.25rem;
@@ -607,6 +606,7 @@
 .hm-service-card p {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 1rem;
+  line-height: calc((7.5 / 16) + 1);
 }
 @media screen and (max-width: 855px) {
   .hm-service-card .icon-group {
@@ -618,6 +618,10 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .service-tab {
+    justify-content: center;
+    padding: 11px 13px;
+  }
   .hm-service-section {
     padding: 71px 20px;
   }
@@ -674,20 +678,12 @@
 }
 .hm-about-article .hor-line {
   height: 3px;
-  max-width: 860px;
-  width: 100%;
   background-color: #7a7a7a;
   margin: 45px auto 40px;
 }
 
-.hm-about-img {
-  max-width: 860px;
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
 .hm-about-img > img {
+  width: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -1082,8 +1078,25 @@
 .member-profile-img {
   padding: 40px 0 10px;
 }
+
+.member-profile .job-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
 .member-profile > p {
   margin-top: 10px;
+}
+.member-profile .job-title span {
+  font-size: calc(15 /16 * 1rem);
+}
+.member-profile .name-jp {
+  font-weight: 700;
+}
+.member-profile .name-eng {
+  font-family: "europa", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #7A7A7A;
 }
 @media screen and (max-width: 768px) {
   .hm-member-article > h2 {
@@ -1715,6 +1728,19 @@ CONTACT SECTION
   padding-left: 20px;
   max-width: 240px;
   margin: 0 auto;
+}
+.contact-btn::after {
+  content: "";
+  background-image: url(../images/index/circle_arrow_icon.png);
+  background-size: contain;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  z-index: 1;
+  filter: invert(1);
 }
 @media screen and (max-width: 768px) {
   .contact-btn-wrapper {
