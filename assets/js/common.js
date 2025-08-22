@@ -1,18 +1,6 @@
 // Your JavaScript code goes here
 document.addEventListener("DOMContentLoaded", () => {
-  // MAKER HEADER DISAPPER AT THE TOP OF THE PAGE
-  const header = document.querySelector(".header-ctnr");
-
-  window.addEventListener("scroll", () => {
-    const header = document.querySelector(".header-ctnr");
-    if (window.location.href.includes("index")) {
-      if (window.scrollY === 0) {
-        header.style.display = "none";
-      } else {
-        header.style.display = "flex";
-      }
-    }
-  });
+  
 
   const tabs = document.querySelectorAll(".service-tab");
   const serviceContents = document.querySelectorAll(".hm-service-content-ctnr");
