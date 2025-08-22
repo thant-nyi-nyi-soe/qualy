@@ -969,6 +969,9 @@
   .hm-num-card-badge {
     padding: 8px 0;
   }
+  .hm-num-card > h2 > span {
+  font-size: 0.875rem;
+}
   .card-right-ctnr {
     gap: 8px;
   }
