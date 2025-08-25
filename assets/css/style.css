@@ -2081,3 +2081,28 @@ NEWS SINGLE PAGE
   height: 100%;
   flex: 1;
 }
+.news-sg-ctnr table {
+  margin-top: 24px;
+  width: 100%;
+}
+.news-sg-ctnr table th {
+  background-color: #7A7A7A;
+  border: #fff;
+  
+  padding: 17px 0 13px;
+}
+.news-sg-ctnr table th:nth-child(1),
+.news-sg-ctnr table th:nth-child(2) {
+  width: 25%; /* 1 part each */
+}
+.news-sg-ctnr table th:nth-child(3) {
+  width: 50%
+}
+
+.news-sg-ctnr table td {
+  background-color: #F9F9F9;
+  border: #fff;
+  padding: 17px 0 13px;
+  text-align: center;
+}
+
