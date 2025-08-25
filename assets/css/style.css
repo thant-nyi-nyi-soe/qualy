@@ -176,11 +176,14 @@
   transform: rotate(180deg);
 }
 .top-slider .slick-dots {
-  position: unset;
-  display: flex;
-  align-items: start;
-  padding-left: 15%;
-  padding-top: 10px;
+  
+}
+.top-slider .slick-active button {
+  height: 24px;
+  width: 24px;
+  border: solid 2px #fbca00;
+  border-radius: 50%;
+  position: relative;
 }
 .top-slider .slick-dots button::before {
   content: "";
@@ -193,13 +196,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-.top-slider .slick-active button {
-  height: 24px;
-  width: 24px;
-  border: solid 2px #fbca00;
-  border-radius: 50%;
-  position: relative;
 }
 .top-slider .slick-active button::before {
   background-color: #fbca00;
