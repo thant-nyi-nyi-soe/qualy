@@ -51,27 +51,31 @@
                 <ul class="breadcrumb">
                     <li><a href="index.html">TOP</a></li>
                     <li>></li>
-                    <li>Contact</li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li>></li>
+                    <li>入力内容確認</li>
                 </ul>
                 <h2>Contact</h2>
                 <h4>お問い合わせ</h4>
                 <div class="hor-line"></div>
                 <p>
-                    この度は、弊社サービスにご興味いただき誠にありがとうございます。
+                    入力内容にお間違いがないか確認の上、「送信する」ボタンを押してください
                     <br>
-                    下記フォームよりお問い合わせください。（ご記入の目安　約1分）
+                    再度ご入力される場合は「入力内容を修正する」ボタンを押してください。
                 </p>
                 <div class="inputs-ctnr">
                     <div class="company-input input-common">
                         <div class="left-side">
-                            <div class="input-label">
-                                <p>会社名</p><span>必須</span>
+                            <p>会社名</p><span>必須</span>
+                            <div class="entered-info">
+                                <p>クオリー株式会社</p>
                             </div>
-                            <input type="text" placeholder="クオリー株式会社">
                         </div>
                         <div class="right-side">
                             <p>部署名</p><span>必須</span>
-                            <input type="text" placeholder="営業部">
+                            <div class="entered-info">
+                                <p>営業部</p>
+                            </div>
                         </div>
                     </div>
 
@@ -79,82 +83,76 @@
                         <p>お役職</p>
                         <div class="radios-ctnr">
                             <div>
-                                <input type="radio" name="position" value="option1">
+
                                 <p>経営者</p>
-                            </div>
-                            <div>
-                                <input type="radio" name="position" value="option2">
-                                <p>管理職</p>
-                            </div>
-                            <div class="last-radio">
-                                <input type="radio" name="position" value="option3">
-                                <p>担当者・その他</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="name-input input-common">
-                        <div class="left-side">
-                            <p>会社名</p><span>必須</span>
-                            <input type="text" placeholder="姓">
-                        </div>
-                        <div class="right-side">
-                            <input type="text" placeholder="名">
-                        </div>
-                    </div>
-
-                    <div class="mail-input input-common">
                         <div class="input-elements">
                             <p>会社名</p><span>必須</span>
-                            <input type="text" placeholder="qualyqa@sample.com">
+                            <div class="entered-info">
+                                <p>姓姓 名名</p>
+                            </div>
                         </div>
+
                     </div>
+
+
 
                     <div class="mail-input input-common">
                         <div class="input-elements">
                             <p>メールアドレス（確認用）</p><span>必須</span>
-                            <input type="text" placeholder="qualyqa@sample.com">
+                            <div class="entered-info">
+                                <p><span>qualyqa@sample.com</span></p>
+                            </div>
                         </div>
                     </div>
 
                     <div class="mail-confirm-input input-common">
                         <div class="input-elements">
                             <p>メールアドレス（確認用）</p><span>必須</span>
-                            <input type="text" placeholder="クオリー株式会社">
+                            <div class="entered-info">
+                                <p><span>qualyqa@sample.com</span></p>
+                            </div>
                         </div>
                     </div>
 
                     <div class="input-common">
                         <div class="input-elements">
                             <p>連絡先電話番号</p><span>必須</span>
-                            <input type="text" placeholder="連絡先電話番号">
-                        </div>
-                    </div>
-
-                    <div class="input-common select-input">
-                        <div class="input-elements">
-                            <p>お問い合わせ内容</p><span>必須</span>
-                            <div class="input-select">
-                                <input type="text" placeholder="選択してください">
-                                <button><img src="./assets/images/contact/greater_than.png" alt="arrow-icon"></button>
+                            <div class="entered-info">
+                                <p><span>000-0000-0000</span></p>
                             </div>
                         </div>
                     </div>
 
                     <div class="input-common">
                         <div class="input-elements">
+                            <p>お問い合わせ内容</p><span>必須</span>
+                            <div class="entered-info">
+                                <p>サービスの利用料金について知りたい</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-common">
+                        <div class="left-side">
                             <p>対象サービス</p><span>必須</span>
-                            <div class="input-select">
-                                <input type="text" placeholder="選択してください">
-                                <button><img src="./assets/images/contact/greater_than.png" alt="arrow-icon"></button>
+                            <div class="entered-info">
+                                <p><span>QA</span>テスト外注について</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="input-common details-input">
-                        <div class="input-elements">
+                        <div class="left-side">
                             <p>お問い合わせの詳細</p>
-                            <input type="text" placeholder="お問い合わせ内容をご記入ください">
+                            <div class="entered-info">
+                                <p><span>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</span>
+                                </p>
+                            </div>
                         </div>
                     </div>
 
@@ -162,15 +160,19 @@
                         <p>同意事項</p><span>必須</span>
                         <div class="checkboxes-ctnr">
                             <div>
-                                <input type="checkbox">
+                                <input type="checkbox" checked>
                                 <span>プライバシーポリシー</span>
                                 <p>に同意する</p>
                             </div>
                         </div>
                     </div>
 
-                    <a class="contact-confirm-btn" href="contact-confirm.html">
-                        <p>入力内容を確認する</p>
+                    <a class="contact-confirm-btn send-button" href="delivered.html">
+                        <p>送信する</p>
+                    </a>
+
+                    <a class="contact-confirm-btn edit-button" href="contact.html">
+                        <p>入力内容を修正する</p>
                     </a>
                 </div>
             </div>
