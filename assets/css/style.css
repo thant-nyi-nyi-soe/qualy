@@ -1979,22 +1979,7 @@ NEWS SINGLE PAGE
   background-color: #fff;
   padding: 40px;
 }
-.news-sg-main-ctnr > h2 {
-  font-family: "europa", sans-serif;
-  font-size: 1.25rem;
-  color: #000;
-  font-weight: 700;
-  display: inline-block;
-  margin-right: 20px;
-  margin-bottom: 32px;
-}
-.news-sg-main-ctnr > p {
-  font-family: "europa", sans-serif;
-  font-size: 0.875rem;
-  font-weight: 700;
-  color: #feca00;
-  margin-top: 23px;
-}
+
 .news-sg-main-ctnr .hor-line {
   height: 3px;
   max-width: 860px;
@@ -2005,6 +1990,7 @@ NEWS SINGLE PAGE
 .details-ctnr {
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
 }
 .details > img {
   width: 100%;
@@ -2107,4 +2093,26 @@ NEWS SINGLE PAGE
   padding: 17px 0 13px;
   text-align: center;
   border: solid 1px #fff;
+}
+.title-h {
+  font-family: "europa", sans-serif;
+  font-size: 1.25rem;
+  color: #000;
+  font-weight: 700;
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 32px;
+  background-color: transparent;
+}
+.title-span {
+  font-family: "europa", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #feca00;
+  margin-top: 23px;
+}
+.details-right {
+  max-width: 240px;
+  background-color: #fff;
+  border-radius: 10px;
 }
