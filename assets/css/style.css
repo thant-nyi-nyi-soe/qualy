@@ -176,7 +176,8 @@
   transform: rotate(180deg);
 }
 .top-slider .slick-dots {
-  
+  position: unset;
+  margin-top: 14px;
 }
 .top-slider .slick-active button {
   height: 24px;
@@ -443,7 +444,7 @@
   transform: rotate(180deg);
 }
 .discount-cards-slider .slick-dots {
-  bottom: -34px;
+  bottom: -39px;
 }
 .discount-cards-slider .slick-dots button::before {
   content: "";
@@ -1978,7 +1979,7 @@ NEWS SINGLE PAGE
   background-color: #fff;
   padding: 40px;
 }
-.news-sg-main-ctnr > h3 {
+.news-sg-main-ctnr > h2 {
   font-family: "europa", sans-serif;
   font-size: 1.25rem;
   color: #000;
@@ -1992,33 +1993,42 @@ NEWS SINGLE PAGE
   font-size: 0.875rem;
   font-weight: 700;
   color: #feca00;
+  margin-top: 23px;
 }
 .news-sg-main-ctnr .hor-line {
   height: 3px;
   max-width: 860px;
   width: 100%;
   background-color: #fbca00;
-  margin: 45px auto 40px;
-}
-.news-sg-main-ctnr .hor-line {
   margin: 23px 0 40px;
 }
-.news-sg-main-ctnr .main-img {
+.details-ctnr {
+  display: flex;
+  flex-wrap: wrap;
+}
+.details > img {
   width: 100%;
   height: 300px;
   background-color: #e7e7e7;
 }
-.news-sg-content-list {
+.details ul {
   background-color: #fff2bf;
   border-radius: 10px;
   padding: 24px 20px;
   margin-top: 24px;
 }
-.news-sg-content-list .content-list * {
-  font-size: 0.875rem;
-  margin-top: 18px;
+.details ul p {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
 }
-.news-sg-content-list .content-list > li::before {
+.details ul li {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.details ul li::before {
   content: "";
   display: inline-block;
   height: 8px;
@@ -2027,78 +2037,74 @@ NEWS SINGLE PAGE
   border-radius: 50%;
   margin-right: 10px;
   margin-bottom: 2px;
+  padding-right: 10px;
 }
-.news-sg-main-ctnr .text-para {
+.details > p {
   margin-top: 24px;
   font-size: 0.875rem;
   line-height: calc(24 / 16);
 }
-.news-sg-main-ctnr .yellow-title {
+.details h2 {
+  font-family: "europa", sans-serif;
+  font-size: 1rem;
+  color: #000;
+  font-weight: 700;
   margin-top: 40px;
   background-color: #feca00;
-  padding: 13px 20px;
   border-radius: 5px;
-}
-.news-sg-main-ctnr .yellow-title h2 {
-  font-size: 1rem;
-  font-weight: 700;
+  padding: 13px 20px;
   letter-spacing: 0;
 }
-.para-for-yellow-title {
-  margin-top: 24px;
-  font-size: 0.875rem;
+.details > p span {
+  color: #EFBE00;
+  font-weight: bold;
+}
+.details h3 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
   line-height: calc(24 / 16);
   letter-spacing: 0;
+  margin-top: 40px;
 }
-.para-for-yellow-title span {
-  color: #feca00;
-}
-.table-title {
-  margin-top: 50px;
-}
-.table-title h3 {
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0;
-}
-.table-horline {
+.details > div{
   height: 3px;
   width: 100%;
   margin-top: 10px;
   display: flex;
 }
-.table-horline div:first-child {
+.details > div div:first-child {
   background-color: #feca00;
   height: 100%;
   width: 120px;
 }
-.table-horline div:last-child {
+.details > div div:last-child {
   background-color: #E7E7E7;
   height: 100%;
   flex: 1;
 }
-.news-sg-ctnr table {
+.details table {
   margin-top: 24px;
   width: 100%;
+  border: solid 1px #fff;
 }
-.news-sg-ctnr table th {
+.details table th {
   background-color: #7A7A7A;
-  border: #fff;
+  border: solid 1px #fff;
   
   padding: 17px 0 13px;
 }
-.news-sg-ctnr table th:nth-child(1),
-.news-sg-ctnr table th:nth-child(2) {
+.details table th:nth-child(1),
+.details table th:nth-child(2) {
   width: 25%; /* 1 part each */
 }
-.news-sg-ctnr table th:nth-child(3) {
+.details table th:nth-child(3) {
   width: 50%
 }
 
-.news-sg-ctnr table td {
+.details table td {
   background-color: #F9F9F9;
-  border: #fff;
   padding: 17px 0 13px;
   text-align: center;
+  border: solid 1px #fff;
 }
-

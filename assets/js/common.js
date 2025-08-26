@@ -1,6 +1,36 @@
 // Your JavaScript code goes here
 document.addEventListener("DOMContentLoaded", () => {
-  
+  setTimeout(() => {
+    const hambg = document.querySelector(".header-hambg");
+    const overlay = document.querySelector(".overlay");
+
+    hambg.addEventListener("click", () => {
+      hambg.classList.toggle("hambg-active");
+
+      hambgToggle(hambg, overlay);
+    });
+
+    overlay.addEventListener("click", () => {
+      hambg.classList.remove("hambg-active");
+
+      hambgToggle(hambg, overlay);
+    });
+  }, 1000);
+
+  function hambgToggle(hambg, overlay) {
+    const accor = document.querySelector(".hambg-accordion");
+    const body = document.querySelector("body");
+
+    if (hambg.classList.contains("hambg-active")) {
+      overlay.classList.add("dimmed");
+      accor.classList.add("accordion-active");
+      body.classList.add("no-scroll");
+    } else {
+      overlay.classList.remove("dimmed");
+      accor.classList.remove("accordion-active");
+      body.classList.remove("no-scroll");
+    }
+  }
 
   const tabs = document.querySelectorAll(".service-tab");
   const serviceContents = document.querySelectorAll(".hm-service-content-ctnr");
@@ -187,7 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (headerService) {
     headerService.addEventListener("click", () => {
-      console.log("clicked")
+      console.log("clicked");
       dropdown.style.display = "flex";
     });
   }

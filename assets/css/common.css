@@ -185,32 +185,25 @@ HEADER
   border-radius: 20px;
   border: solid 2px #fff;
 }
-.hambg-btn {
+.top-slider-btns {
+  display: none;
+}
+.header-hambg {
   height: 9px;
   width: 24px;
   display: none;
   flex-direction: column;
-  gap: 8px;
   justify-content: center;
   align-items: center;
+  gap: 8px;
 }
-.hambg-btn * {
+.hambg-btn > * {
   height: 1px;
-  width: 24px;
-  background-color: #fff;
-}
-.top-slider-btns {
-  display: none;
-}
-.sp-hambg-btn {
-  position: fixed;
-  right: 15px;
-  top: 26px;
-}
-.sp-hambg-btn * {
+  width: 100%;
   background-color: #000;
 }
-@media screen and (max-width: 1120px){
+
+@media screen and (max-width: 1120px) {
   .header-service .service-dropdown {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -236,8 +229,73 @@ HEADER
   .header-logo img {
     height: 24px;
   }
-  .hambg-btn {
+  .header-hambg {
     display: flex;
+  }
+}
+
+/*==============================
+HAMBURGER ACCORDION
+==============================*/
+.hambg-accordion {
+  position: fixed;
+  top: -425px;
+  display: block;
+  width: 100%;
+  background-color: #7a7a7a;
+  padding: 0 20px;
+  z-index: 900;
+}
+.hambg-accordion > * {
+  margin: 30px 0;
+  width: fit-content;
+  color: #fff;
+  font-family: "europa", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+.hambg-contact-btn {
+  background-color: #feca01;
+  color: #000;
+  height: 40px;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: solid 2px #fff;
+  margin: 30px auto;
+}
+
+.hambg-accordion span {
+  font-size: 10px;
+  font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+  .hambg-active .ham-top-line {
+    transform: translateY(4.5px) rotate(45deg);
+    transition: transform 0.3s ease;
+  }
+  .hambg-active .ham-bot-line {
+    transform: translateY(-4.5px) rotate(-45deg);
+    transition: transform 0.3s ease;
+  }
+  
+  .accordion-active {
+    transform: translateY(485px);
+    transition: transform 0.9s ease;
+  }
+  .dimmed {
+    position: fixed;
+    inset: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* 50% black dim */
+    transition: opacity 0.3s ease;
+    z-index: 800;
+  }
+  .no-scroll {
+    overflow: hidden;
   }
 }
 
@@ -432,7 +490,7 @@ FOOTER
   font-weight: 700;
   text-align: center;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 768px) {
   .back-to-top-btn {
     right: 30px;
     justify-content: end;
