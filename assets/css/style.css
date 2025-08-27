@@ -2515,22 +2515,22 @@ PRICE SECTION
   margin-top: 40px;
 }
 .price-discount-card {
-  border: solid 6px #feca00;
+  /* border: solid 6px #feca00; */
+  background-color: #fff;
   border-radius: 10px;
-  padding: 33px 0;
+  padding: 37px 0;
   max-width: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 280px;
-  gap: 3px;
 }
 .price-discount-card h4 {
   font-family: "europa", sans-serif;
   font-size: 0.875rem;
   font-weight: 700;
-  line-height: 2;
+  line-height: calc(18 / 14);
   color: #feca00;
   text-align: center;
   margin-top: 4px;
@@ -2544,6 +2544,7 @@ PRICE SECTION
   font-weight: 700;
   line-height: calc(20 / 14);
   text-align: center;
+  margin-top: 14px;
 }
 .price-discount-card .price-yen {
   font-family: "europa", sans-serif;
@@ -2551,6 +2552,10 @@ PRICE SECTION
   font-weight: 700;
   line-height: calc(51 / 40);
   text-align: center;
+  margin-top: 21px;
+}
+.price-discount-card .price-yen span {
+  font-size: 0.875rem;
 }
 .price-discount-card .monthly-fee {
   font-family: "Noto Sans JP", sans-serif;
@@ -2559,6 +2564,7 @@ PRICE SECTION
   line-height: calc(15/ 10);
   text-align: center;
   color: #ADADAD;
+  margin-top: 3px;
 }
 
 .price-discount-card .save-yen-btn {
@@ -2569,6 +2575,10 @@ PRICE SECTION
   margin: 0 auto;
   background-color: #feca00;
   border-radius: 5px;
-  padding: 12px 0;
+  padding: 13px 0;
   width: 155px;
+  margin-top: 20px;
+}
+.price-discount-card .save-yen-btn span {
+  font-size: 0.875rem;
 }
