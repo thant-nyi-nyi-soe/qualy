@@ -284,7 +284,7 @@ HAMBURGER ACCORDION
   
   .accordion-active {
     transform: translateY(485px);
-    transition: transform 0.9s ease;
+    transition: transform 0.5s ease;
   }
   .dimmed {
     position: fixed;
@@ -636,8 +636,7 @@ FOOTER
 }
 @media screen and (max-width: 768px) {
   .contact-banner-section {
-    max-width: 315px;
-    right: 30px;
+    display: none;
   }
   .contact-main-button::before {
     height: 80px;
