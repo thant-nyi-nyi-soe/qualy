@@ -255,4 +255,15 @@ $(function () {
       },
     ],
   });
+
+  $(".works-slider").slick({
+    slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          infinite: true,
+          centerMode: true,
+          centerPadding: "40px",
+          variableWidth: true,
+
+  });
 });

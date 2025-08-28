@@ -1268,7 +1268,7 @@
 }
 .hm-contact-main-button::after {
   content: "";
-  background-image: url(../images/index/contact/right_arrow_3.png);
+  background-image: url(../images/index/contact/right_arrow_three.png);
   height: 30px;
   width: 30px;
   position: absolute;
@@ -1467,7 +1467,7 @@
 }
 .hm-news-btn::after {
   content: "";
-  background-image: url(../images/index/contact/right_arrow_3.png);
+  background-image: url(../images/index/right_arrow_three.png);
   height: 30px;
   width: 30px;
   position: absolute;
@@ -2214,7 +2214,7 @@ SERVICE TOP SECTION
 .service-ctnr {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 90px;
+  column-gap: 60px;
   max-width: 900px;
   margin: 0 auto;
   padding: 0 30px;
@@ -2237,6 +2237,7 @@ SERVICE TOP SECTION
 
 .check-info-ctnr {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   margin-top: 10px;
   max-width: 320px;
@@ -2256,6 +2257,7 @@ SERVICE TOP SECTION
   font-weight: 600;
   line-height: calc(30 / 16);
   color: #000;
+  background: linear-gradient(to bottom, transparent 40%, rgb(255, 255, 255, 0.7) 40%);
 }
 .chck-info span {
   font-family: "europa", sans-serif;
@@ -2265,30 +2267,18 @@ SERVICE TOP SECTION
 .info-n-bg {
   position: relative;
 }
-
-.white-bg {
-  height: 16px;
-  background-color: #fff;
-  opacity: 0.5;
-
-  position: absolute;
-  left: -5px;
-  right: -5px;
-  bottom: 0;
-}
-
 .btns-ctnr {
   display: flex;
   gap: 20px;
   max-height: 50px;
-  margin: 22px auto 0;
 }
 .btns-ctnr * {
   flex: 1;
   border-radius: 25px;
-  padding: 15px 10px 15px 20px;
+  padding: 18px 10px 18px 20px;
   color: #fff;
   max-width: 155px;
+  width: 100%;
   position: relative;
   font-size: 0.875rem;
   font-weight: 600;
@@ -2338,6 +2328,13 @@ SERVICE TOP SECTION
   .service-ctnr-left > p {
     font-size: calc(20 / 16 * 1rem);
   }
+  .btns-ctnr {
+    justify-content: center;
+  }
+   .btns-ctnr * {
+    max-width: 100%;
+
+  }
 }
 
 /*========================
@@ -2347,7 +2344,7 @@ SERVICE MAIN SECTION
   background-color: #f5f5f5;
 }
 .service-main-ctnr {
-  padding: 82px 20px 100px;
+  padding: 78px 20px 100px;
   margin: 0 auto;
   max-width: 900px;
 }
@@ -2355,7 +2352,7 @@ SERVICE MAIN SECTION
   font-family: "europa", sans-serif;
   font-size: 5rem;
   font-weight: 700;
-  line-height: calc(36 / 80);
+  line-height: calc(101 / 80);
   color: #feca00;
   display: inline-block;
 }
@@ -2448,13 +2445,84 @@ SERVICE MAIN SECTION
 }
 
 /*========================
+FEATURES SECTION
+========================*/
+.features-wrapper {
+  width: 100%;
+}
+.features-ctnr {
+  padding: 78px 20px 29px;
+  margin: 0 auto;
+  max-width: 900px;
+}
+.features-ctnr h2 {
+  font-family: "europa", sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: calc(101 / 80);
+  color: #feca00;
+  display: inline-block;
+}
+.features-ctnr h2 span {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: calc(30 / 16);
+  color: #000;
+  margin-left: 20px;
+}
+.features-ctnr .hor-line {
+  height: 2px;
+  width: 100%;
+  background-color: #7a7a7a;
+  margin: 40px 0 42px;
+}
+.features-title-line {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.features-title-line img {
+  width: 16px;
+  height: 16px;
+}
+.features-title-line h3 {
+  font-family: "europa", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #7a7a7a;
+  line-height: calc(28 / 24);
+}
+.features-title-line h3 span {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.features-para {
+  margin-top: 22px;
+  font-size: 0.875rem;
+  line-height: 2;
+  letter-spacing: 0;
+  margin-bottom: 71px;
+}
+@media screen and (max-width: 768px) {
+  .features-wrapper {
+    display: none;
+  }
+}
+
+
+
+
+
+/*========================
 PRICE SECTION
 ========================*/
 .price-wrapper {
   background-color: #f5f5f5;
 }
 .price-main-ctnr {
-  padding: 82px 20px 100px;
+  padding: 78px 20px 100px;
   margin: 0 auto;
   max-width: 900px;
 }
@@ -2462,7 +2530,7 @@ PRICE SECTION
   font-family: "europa", sans-serif;
   font-size: 5rem;
   font-weight: 700;
-  line-height: calc(36 / 80);
+  line-height: calc(101 / 80);
   color: #feca00;
   display: inline-block;
 }
@@ -2489,7 +2557,7 @@ PRICE SECTION
   width: 16px;
   height: 16px;
 }
-.price-title-line p {
+.price-title-line h3 {
   font-size: 1.5rem;
   font-weight: 700;
   color: #7a7a7a;
@@ -2515,16 +2583,20 @@ PRICE SECTION
   margin-top: 40px;
 }
 .price-discount-card {
-  /* border: solid 6px #feca00; */
   background-color: #fff;
   border-radius: 10px;
-  padding: 37px 0;
-  max-width: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 280px;
+  padding: 37px 0 40px;
+  display: grid;
+  grid-template-rows: 18px 44px 62px 18px 60px;
+  position: relative;
+}
+.corner-badge {
+  width: 63px;
+  height: 60px;
+
+  position: absolute;
+  top: 6px;
+  left: 6px;
 }
 .price-discount-card h4 {
   font-family: "europa", sans-serif;
@@ -2533,7 +2605,7 @@ PRICE SECTION
   line-height: calc(18 / 14);
   color: #feca00;
   text-align: center;
-  margin-top: 4px;
+  align-self: end;
 }
 .price-discount-card span {
   font-family: "europa", sans-serif;
@@ -2544,7 +2616,7 @@ PRICE SECTION
   font-weight: 700;
   line-height: calc(20 / 14);
   text-align: center;
-  margin-top: 14px;
+  align-self: center;
 }
 .price-discount-card .price-yen {
   font-family: "europa", sans-serif;
@@ -2552,7 +2624,8 @@ PRICE SECTION
   font-weight: 700;
   line-height: calc(51 / 40);
   text-align: center;
-  margin-top: 21px;
+  letter-spacing: -1px;
+  align-self: end;
 }
 .price-discount-card .price-yen span {
   font-size: 0.875rem;
@@ -2561,24 +2634,641 @@ PRICE SECTION
   font-family: "Noto Sans JP", sans-serif;
   font-size: calc(10 / 16 * 1rem);
   font-weight: 700;
-  line-height: calc(15/ 10);
+  line-height: calc(15 / 10);
   text-align: center;
-  color: #ADADAD;
-  margin-top: 3px;
+  color: #adadad;
 }
 
 .price-discount-card .save-yen-btn {
   font-family: "Europa", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
-  text-align: center;
   margin: 0 auto;
   background-color: #feca00;
   border-radius: 5px;
   padding: 13px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 155px;
-  margin-top: 20px;
+  max-height: 40px;
+  align-self: end;
 }
 .price-discount-card .save-yen-btn span {
   font-size: 0.875rem;
+}
+
+/*=======================
+SERVICE OVERVIEW SECTION
+=========================*/
+.service-ovv-ctnr {
+  margin-top: 24px;
+  border: solid 2px #feca00;
+  border-radius: 10px;
+  padding: 20px 50px 26px;
+  background-color: #fff;
+}
+.service-ovv-ctnr h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: calc(28 / 20);
+  color: #feca00;
+  text-align: center;
+}
+.service-ovv-ctnr .hor-line {
+  height: 2px;
+  width: 100%;
+  background-color: #feca00;
+  margin: 18px 0 24px;
+}
+.ovv-grid {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 10px;
+}
+.ovv-grid * {
+  border-radius: 5px;
+  padding: 15px;
+
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 15px 0;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+.ovv-grid * span {
+  font-family: "europa", sans-serif;
+  font-weight: 700;
+}
+.table-left {
+  background-color: #feca00;
+  width: 180px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-right {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+
+/*=======================
+TEST CASE SECTION
+=======================*/
+.test-case-section {
+  margin-top: 101px;
+}
+.test-case-title-line {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.test-case-title-line img {
+  width: 16px;
+  height: 16px;
+}
+.test-case-title-line h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #7a7a7a;
+  line-height: calc(28 / 24);
+}
+.test-case-main-para {
+  margin-top: 24px;
+  font-size: 0.875rem;
+  line-height: 2;
+  letter-spacing: 0;
+}
+.options-ctnr {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.option {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 37px 0 40px;
+  display: grid;
+  grid-template-rows: 18px 44px 62px 18px;
+  align-items: end;
+  position: relative;
+}
+.option h4 {
+  font-family: "europa", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: calc(18 / 14);
+  color: #feca00;
+  text-align: center;
+  align-self: end;
+}
+.option span {
+  font-family: "europa", sans-serif;
+}
+.option .para {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: calc(20 / 14);
+  text-align: center;
+  align-self: center;
+}
+.option .price-yen {
+  font-family: "europa", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: calc(51 / 40);
+  text-align: center;
+  align-self: end;
+}
+.option .price-yen span {
+  font-size: 0.875rem;
+}
+.option .monthly-fee {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: calc(10 / 16 * 1rem);
+  font-weight: 700;
+  line-height: calc(15 / 10);
+  text-align: center;
+  color: #adadad;
+}
+
+/*=============================
+WORKS SECTION
+===============================*/
+.works-section {
+  width: 100%;
+  background-color: #fff;
+  padding: 78px 20px 100px;
+}
+.works-title {
+  margin: 0 auto;
+  max-width: 860px;
+}
+.works-title h2 {
+  font-family: "europa", sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: calc(101 / 80);
+  color: #feca00;
+  display: inline-block;
+}
+.works-title h2 span {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: calc(30 / 16);
+  color: #000;
+  margin-left: 20px;
+}
+.works-title h2 .qa {
+  font-family: "europa", sans-serif;
+  font-size: 1rem;
+  margin-left: unset;
+}
+.works-title .hor-line {
+  height: 2px;
+  width: 100%;
+  background-color: #7a7a7a;
+  margin: 22px 0 40px;
+}
+
+.works-slider {
+  width: 100%;
+  position: relative;
+}
+.works-slider .slick-arrow {
+  background-color: #000;
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.works-slider .slick-arrow::before {
+  content: "";
+  background-image: url(../images/service/slick_arrow.png);
+  background-size: contain;
+  width: 15px;
+  height: 12px;
+  display: block;
+  opacity: 1;
+}
+.works-slider .slick-prev {
+  transform: translateX(-390px);
+}
+.works-slider .slick-prev::before {
+  transform: rotate(180deg);
+}
+.works-slider .slick-next {
+  transform: translateX(350px);
+}
+.works-slide {
+  padding: 40px;
+  max-width: 660px;
+  border: solid 2px #f0f0f0;
+  border-radius: 10px;
+  margin: 0 20px;
+}
+.works-slide-title {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.works-slider img {
+  width: 120px;
+  height: 120px;
+}
+.works-slider h4 {
+  font-family: "europa", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #feca00;
+  line-height: calc(26 / 20);
+  display: inline-block;
+  position: relative;
+}
+.works-slider h4::after {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: #feca00;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -47px;
+}
+.works-slider .works-slide-title p {
+  margin-top: 8px;
+  font-weight: 600;
+  line-height: calc(24 / 16);
+}
+.works-slider .works-slide-title p span {
+  font-family: "europa", sans-serif;
+  font-weight: 700;
+}
+.works-slider .hor-line {
+  height: 2px;
+  width: 100%;
+  background-color: #feac00;
+  margin: 20px 0;
+}
+.works-slide-para {
+  font-size: 0.875rem;
+  line-height: 2;
+}
+.works-slide-para span {
+  font-family: "europa", sans-serif;
+}
+
+/*========================
+OTHER MAIN SECTION
+========================*/
+.other-section {
+  background-color: #f5f5f5;
+}
+.other-main-ctnr {
+  padding: 78px 20px 100px;
+  margin: 0 auto;
+  max-width: 900px;
+}
+.other-main-ctnr h2 {
+  font-family: "europa", sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: calc(101 / 80);
+  color: #feca00;
+  display: inline-block;
+}
+.other-main-ctnr h2 span {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: calc(30 / 16);
+  color: #000;
+  margin-left: 20px;
+}
+.ohter-main-ctnr h2 .qa {
+  font-family: "europa", sans-serif;
+  font-size: 1rem;
+  margin-left: unset;
+}
+.other-main-ctnr .hor-line {
+  height: 2px;
+  width: 100%;
+  background-color: #7a7a7a;
+  margin: 41px 0 40px;
+}
+.other-main-ctnr .table-right {
+  background-color: #fff;
+  line-height: 100%;
+}
+@media screen and (max-width: 768px) {
+  .other-section {
+    display: none;
+  }
+}
+
+
+/*========================
+FAQ SECTION
+========================*/
+.faq-wrapper {
+  width: 100%;
+}
+.faq-ctnr {
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 78px 20px 29px;
+}
+.faq-ctnr h2 {
+  font-family: "europa", sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: calc(101 / 80);
+  color: #feca00;
+  display: inline-block;
+}
+.faq-ctnr h2 span {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: calc(30 / 16);
+  color: #000;
+  margin-left: 20px;
+}
+.faq-ctnr .hor-line {
+  height: 2px;
+  width: 100%;
+  background-color: #7a7a7a;
+  margin: 40px 0 16px;
+}
+.faq-ctnr .question-line {
+  margin-top: 24px;
+  border-radius: 10px;
+  background-color: #fffbef;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 21px 24px;
+  position: relative;
+}
+.faq-ctnr .question-line h3 {
+  font-family: "europa", sans-serif;
+  font-size: calc(30 / 16 * 1rem);
+  font-weight: 700;
+  color: #feca00;
+}
+.faq-ctnr .question-line p {
+  font-weight: 700;
+}
+.faq-ctnr .question-line p span {
+  font-family: "europa", sans-serif;
+  font-weight: 700;
+}
+.faq-ctnr .question-line::after {
+  content: "";
+  background-image: url(../images/service/plus_icon.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  display: block;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 24px;
+}
+
+
+
+
+
+/* HOME CONTACT SECTION */
+.s-contact-wrapper {
+  width: 100%;
+  padding: 78px 20px 100px;
+  background-color: #f5f5f5;
+}
+.s-contact-section {
+  border: solid 2px #feca00;
+  border-radius: 20px;
+  background-color: #fff;
+  position: relative;
+  height: 100%;
+  padding: 84px 0 62px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.s-contact-cards-ctnr {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 48px;
+}
+.s-contact-section .exit-btn {
+  width: 50px;
+  position: absolute;
+  top: -25px;
+  right: -25px;
+}
+.s-contact-cards-ctnr > h2 {
+  position: absolute;
+  font-family: "europa", sans-serif;
+  font-size: 5rem;
+  color: #feca00;
+  top: 0;
+  transform: translateY(-65%);
+  font-weight: 700;
+  padding: 0 20px;
+}
+.s-contact-cards-ctnr > span {
+  display: block;
+  height: 10px;
+  background-color: #fffbef;
+  transform: translateY(-11px);
+}
+.s-contact-cards-ctnr .no-border {
+  height: 5px;
+  max-width: 440px;
+  width: 100%;
+  background: #fffbef;
+  display: block;
+  position: absolute;
+  top: -1.5px;
+}
+.s-contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 160px;
+}
+.s-contact-card .icon-group {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 160px;
+}
+.s-contact-card .icon-group .circle {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+}
+.s-contact-card .icon-group .icon {
+  position: absolute;
+  max-height: 55px;
+}
+.s-contact-card p {
+  margin-top: 4px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  text-align: center;
+}
+.s-contact-card span {
+  color: #fea601;
+}
+.s-contact-text {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  font-weight: 600;
+  padding: 40px;
+}
+.s-contact-text > span {
+  font-family: "europa", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.s-contact-text br {
+  display: none;
+}
+.s-contact-ctnr {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.s-contact-main-button {
+  flex: 4;
+  background-color: #feca01;
+  max-height: 80px;
+  text-align: center;
+  padding: 28px 0;
+
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: calc(15 / 16 * 1rem);
+  font-weight: 600;
+  border-radius: 40px;
+  position: relative;
+}
+.s-contact-main-button::after {
+  content: "";
+  background-image: url(../images/contact/right_arrow_three.png);
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.s-phnum-line {
+  flex: 3;
+  display: flex;
+  margin: 10px 0;
+  gap: 10px;
+  align-items: center;
+}
+.s-phnum-line p {
+  font-family: "europa", sans-serif;
+  font-size: calc(30 / 16 * 1rem);
+  font-weight: 700;
+}
+@media screen and (max-width: 768px) {
+  .s-contact-wrapper {
+    padding: 71px 20px 80px;
+  }
+  .s-contact-section {
+    padding: 51px 0 47px;
+  }
+
+  .s-contact-cards-ctnr > h2 {
+    font-size: calc(60 / 16 * 1rem);
+  }
+  .s-contact-cards-ctnr .no-border {
+    max-width: 357px;
+  }
+  .s-contact-section .exit-btn {
+    display: none;
+  }
+  .s-contact-card {
+    max-width: 80px;
+  }
+  .s-contact-card .icon-group {
+    height: 60px;
+  }
+  .s-contact-card .icon-group .circle {
+    width: 60px;
+    height: 60px;
+  }
+  .s-contact-card .icon-group .icon {
+    position: absolute;
+    max-height: 22px;
+  }
+  .s-contact-text {
+    font-size: 0.75rem;
+    padding: 24px 15px;
+    line-height: 2;
+    text-align: center;
+  }
+  .s-contact-text span {
+    font-family: "europa", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+  .s-contact-text br {
+    display: block;
+  }
+  .s-contact-ctnr {
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 40px;
+  }
+  .s-contact-main-button {
+    padding: 18px 0 18px 20px;
+    text-align: start;
+    width: 100%;
+  }
+  .s-contact-info > p {
+    padding-left: 32px;
+    font-weight: 600;
+  }
+}
+@media screen and (max-width: 480px) {
+  .s-contact-cards-ctnr > h2 {
+    font-size: 2.5rem;
+  }
+  .s-contact-cards-ctnr .no-border {
+    max-width: 255px;
+  }
+
+  .s-contact-ctnr {
+    padding: 0 15px;
+  }
 }
