@@ -667,3 +667,215 @@ BREADCRUMB
 .breadcrumb li:last-child {
   color: #000;
 }
+
+
+/* ===============================
+HEADER
+=============================== */
+.headertwo-ctnr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 40px;
+  z-index: 1000;
+  background-color: #fff;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.headertwo-logo img {
+  height: 40px;
+}
+.headertwo-menu {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.headertwo-menu > * {
+  font-family: "europa", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+}
+.headertwo-service {
+  position: relative;
+}
+.headertwo-service .triangle-b4-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  transform: translateX(-50%);
+  width: 100px;
+  transform: rotate(90deg);
+  padding-left: 10px;
+}
+.headertwo-service:hover .triangle-b4-dropdown {
+  display: block;
+}
+.headertwo-service:hover .service-dropdown {
+  display: grid;
+}
+.headertwo-service .service-dropdown {
+  position: absolute;
+  top: calc(100% + 30px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 40px 90px;
+  max-width: 860px;
+
+  background-color: #fff;
+  border-radius: 20px;
+  display: none;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  align-items: start;
+  justify-content: center;
+
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.16);
+}
+.headertwo-menu span {
+  font-size: 10px;
+  font-weight: 500;
+}
+.headertwo-contact-btn {
+  background-color: #feca01;
+  color: #000;
+  height: 40px;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: solid 2px #fff;
+}
+.top-slider-btns {
+  display: none;
+}
+.headertwo-hambg {
+  height: 9px;
+  width: 24px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.hambg-btn > * {
+  height: 1px;
+  width: 100%;
+  background-color: #000;
+}
+
+@media screen and (max-width: 1120px) {
+  .headertwo-service .service-dropdown {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .headertwo-menu {
+    gap: 20px;
+  }
+  .headertwo-service:after {
+    left: calc(100% + 2px);
+  }
+  .headertwo-contact-btn {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .headertwo-ctnr {
+    display: flex;
+  }
+  .headertwo-ctnr {
+    padding: 18px 15px;
+  }
+  .headertwo-menu {
+    display: none;
+  }
+  .headertwo-logo img {
+    height: 24px;
+  }
+  .headertwo-hambg {
+    display: flex;
+  }
+}
+
+/*==============================
+HAMBURGER ACCORDION
+==============================*/
+.hambg-accordion {
+  position: fixed;
+  top: -425px;
+  display: block;
+  width: 100%;
+  background-color: #7a7a7a;
+  padding: 0 20px;
+  z-index: 900;
+}
+.hambg-accordion > * {
+  margin: 30px 0;
+  width: fit-content;
+  color: #fff;
+  font-family: "europa", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+.hambg-contact-btn {
+  background-color: #feca01;
+  color: #000;
+  height: 40px;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: solid 2px #fff;
+  margin: 30px auto;
+}
+
+.hambg-accordion span {
+  font-size: 10px;
+  font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+  .hambg-active .ham-top-line {
+    transform: translateY(4.5px) rotate(45deg);
+    transition: transform 0.3s ease;
+  }
+  .hambg-active .ham-bot-line {
+    transform: translateY(-4.5px) rotate(-45deg);
+    transition: transform 0.3s ease;
+  }
+  
+  .accordion-active {
+    transform: translateY(485px);
+    transition: transform 0.5s ease;
+  }
+  .dimmed {
+    position: fixed;
+    inset: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* 50% black dim */
+    transition: opacity 0.3s ease;
+    z-index: 800;
+  }
+  .no-scroll {
+    overflow: hidden;
+  }
+}
+
+
+.footertwo .footer-wrapper {
+  background-color: #feca00;
+}
+.footertwo .footer-contact-btn {
+  background-color: #002DD7;
+  color: #fff;
+}
+.footertwo .ftr-content-ctnr * {
+  color: #000;
+}

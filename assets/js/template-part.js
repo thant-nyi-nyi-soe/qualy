@@ -15,6 +15,23 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch((error) => console.error("Error loading header:", error));
   }
 
+
+  // Header two 
+  const headertwo = document.getElementById("headertwo");
+  if (headertwo) {
+    fetch("./header_two.html")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.text();
+      })
+      .then((data) => {
+        headertwo.innerHTML = data;
+      })
+      .catch((error) => console.error("Error loading header:", error));
+  }
+
   // Footer part
   const footer = document.getElementById("footerPart");
   if (footer) {

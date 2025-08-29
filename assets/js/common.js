@@ -1,27 +1,35 @@
 // Your JavaScript code goes here
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
-    const hambg = document.querySelector(".header-hambg");
     const overlay = document.querySelector(".overlay");
+    const hambgs = document.querySelectorAll(".hambg-btn");
 
-    hambg.addEventListener("click", () => {
-      hambg.classList.toggle("hambg-active");
+    hambgs.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        // Toggle only this button
+        btn.classList.toggle("hambg-active");
 
-      hambgToggle(hambg, overlay);
+        // hambgs.forEach((other) => {
+        //   if (other !== btn) other.classList.remove("hambg-active");
+        // });
+
+        btnToggle(btn, overlay);
+      });
     });
 
-    overlay.addEventListener("click", () => {
-      hambg.classList.remove("hambg-active");
-
-      hambgToggle(hambg, overlay);
-    });
+    if (overlay) {
+      overlay.addEventListener("click", () => {
+        hambgs.forEach((btn) => btn.classList.remove("hambg-active"));
+        btnToggle(null, overlay); // Reset everything
+      });
+    }
   }, 1000);
 
-  function hambgToggle(hambg, overlay) {
+  function btnToggle(btn, overlay) {
     const accor = document.querySelector(".hambg-accordion");
     const body = document.querySelector("body");
 
-    if (hambg.classList.contains("hambg-active")) {
+    if (btn.classList.contains("hambg-active")) {
       overlay.classList.add("dimmed");
       accor.classList.add("accordion-active");
       body.classList.add("no-scroll");
@@ -221,6 +229,23 @@ document.addEventListener("DOMContentLoaded", () => {
       dropdown.style.display = "flex";
     });
   }
+
+  const syb = document.querySelectorAll(".save-yen-btn");
+  const pdc = document.querySelectorAll(".price-discount-card");
+
+  if (syb) {
+    syb.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        syb.forEach((t) => t.classList.remove("syb-clicked"));
+        btn.classList.add("syb-clicked");
+      });
+    });
+  }
+
+  // const contact = document.querySelector(".hm-contact-wrapper");
+  // if (contact) {
+  //   console.log(contact.innerHTML);
+  // }
 });
 
 // Your jQuery code goes here
@@ -258,12 +283,11 @@ $(function () {
 
   $(".works-slider").slick({
     slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: true,
-          infinite: true,
-          centerMode: true,
-          centerPadding: "40px",
-          variableWidth: true,
-
+    slidesToScroll: 1,
+    arrows: true,
+    infinite: true,
+    centerMode: true,
+    centerPadding: "40px",
+    variableWidth: true,
   });
 });

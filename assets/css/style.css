@@ -1148,23 +1148,25 @@
 
 /* HOME CONTACT SECTION */
 .hm-contact-wrapper {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 100px 20px;
+  width: 100%;
+  padding: 78px 20px 100px;
+  background-color: #f5f5f5;
 }
 .hm-contact-section {
   border: solid 2px #feca00;
   border-radius: 20px;
-  background-color: #fffbef;
+  background-color: #fff7d9;
   position: relative;
   height: 100%;
   padding: 84px 0 62px;
+  max-width: 860px;
+  margin: 0 auto;
 }
 .hm-contact-cards-ctnr {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0 48px;
+  justify-content: center;
+  align-items: start;
+  gap: 88px;
 }
 .hm-contact-section .exit-btn {
   width: 50px;
@@ -1203,32 +1205,22 @@
   align-items: center;
   max-width: 160px;
 }
-.hm-contact-card .icon-group {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 160px;
-}
-.hm-contact-card .icon-group .circle {
-  position: absolute;
-  width: 120px;
-  height: 120px;
-}
-.hm-contact-card .icon-group .icon {
-  position: absolute;
-  max-height: 55px;
-}
+
 .hm-contact-card p {
-  margin-top: 4px;
+  margin-top: 15px;
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 0.75rem;
+  font-size: 1rem;
   line-height: 1.4;
   text-align: center;
+  font-weight: 600;
+  line-height: calc(30 / 16);
+}
+.hm-contact-card br {
+  display: none;
 }
 .hm-contact-card span {
   color: #fea601;
+  font-weight: 700;
 }
 .hm-contact-text {
   max-width: 640px;
@@ -1256,19 +1248,19 @@
 .hm-contact-main-button {
   flex: 4;
   background-color: #feca01;
-  max-height: 80px;
   text-align: center;
   padding: 28px 0;
+  line-height: 1.5;
 
   font-family: "Noto Sans JP", sans-serif;
-  font-size: calc(15 / 16 * 1rem);
+  font-size: 1rem;
   font-weight: 600;
-  border-radius: 40px;
+  border-radius: 25px;
   position: relative;
 }
 .hm-contact-main-button::after {
   content: "";
-  background-image: url(../images/index/contact/right_arrow_three.png);
+  background-image: url(../images/contact/right_arrow_three.png);
   height: 30px;
   width: 30px;
   position: absolute;
@@ -1276,48 +1268,54 @@
   top: 50%;
   transform: translateY(-50%);
 }
-.hm-phnum-line {
+.s-phnum-line {
   flex: 3;
   display: flex;
   margin: 10px 0;
   gap: 10px;
   align-items: center;
 }
-.hm-phnum-line p {
+.s-phnum-line p {
   font-family: "europa", sans-serif;
   font-size: calc(30 / 16 * 1rem);
   font-weight: 700;
 }
 @media screen and (max-width: 768px) {
   .hm-contact-wrapper {
-    padding: 71px 20px 80px;
+    padding: 71px 15px 80px;
+    background-color: #fff;
   }
   .hm-contact-section {
     padding: 51px 0 47px;
+    background-color: #fffbef;
   }
-
+  .hm-contact-cards-ctnr {
+    gap: 30px;
+  }
   .hm-contact-cards-ctnr > h2 {
-    font-size: calc(60 / 16 * 1rem);
+    font-size: 2.5rem;
   }
   .hm-contact-cards-ctnr .no-border {
-    max-width: 357px;
+    max-width: 255px;
   }
   .hm-contact-section .exit-btn {
     display: none;
   }
-  .hm-contact-card {
-    max-width: 80px;
-  }
-  .hm-contact-card .icon-group {
-    height: 60px;
-  }
-  .hm-contact-card .icon-group .circle {
+  .hm-contact-card img {
     width: 60px;
     height: 60px;
   }
-  .hm-contact-card .icon-group .icon {
-    position: absolute;
-    max-height: 22px;
+  .hm-contact-card p {
+    margin-top: 4px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    text-align: center;
+    font-weight: 600;
+    line-height: calc(30 / 16);
+  }
+  .hm-contact-card br {
+    display: block;
   }
   .hm-contact-text {
     font-size: 0.75rem;
@@ -1336,7 +1334,7 @@
   .hm-contact-ctnr {
     flex-direction: column;
     gap: 24px;
-    padding: 0 40px;
+    padding: 0 15px;
   }
   .hm-contact-main-button {
     padding: 18px 0 18px 20px;
@@ -1346,18 +1344,6 @@
   .hm-contact-info > p {
     padding-left: 32px;
     font-weight: 600;
-  }
-}
-@media screen and (max-width: 480px) {
-  .hm-contact-cards-ctnr > h2 {
-    font-size: 2.5rem;
-  }
-  .hm-contact-cards-ctnr .no-border {
-    max-width: 255px;
-  }
-
-  .hm-contact-ctnr {
-    padding: 0 15px;
   }
 }
 
@@ -2257,7 +2243,12 @@ SERVICE TOP SECTION
   font-weight: 600;
   line-height: calc(30 / 16);
   color: #000;
-  background: linear-gradient(to bottom, transparent 40%, rgb(255, 255, 255, 0.7) 40%);
+  padding-left: 3px;
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgb(255, 255, 255, 0.7) 40%
+  );
 }
 .chck-info span {
   font-family: "europa", sans-serif;
@@ -2270,18 +2261,17 @@ SERVICE TOP SECTION
 .btns-ctnr {
   display: flex;
   gap: 20px;
-  max-height: 50px;
 }
 .btns-ctnr * {
   flex: 1;
   border-radius: 25px;
-  padding: 18px 10px 18px 20px;
+  padding: 15px 46px 15px 20px;
   color: #fff;
-  max-width: 155px;
-  width: 100%;
   position: relative;
   font-size: 0.875rem;
   font-weight: 600;
+  line-height: calc(20 / 14);
+  letter-spacing: 0;
 }
 .btns-ctnr *::after {
   content: "";
@@ -2330,10 +2320,10 @@ SERVICE TOP SECTION
   }
   .btns-ctnr {
     justify-content: center;
+    gap: 15px;
   }
-   .btns-ctnr * {
+  .btns-ctnr * {
     max-width: 100%;
-
   }
 }
 
@@ -2420,6 +2410,9 @@ SERVICE MAIN SECTION
 }
 
 @media screen and (max-width: 768px) {
+  .service-main-ctnr {
+    padding: 71px 15px 80px;
+  }
   .service-main-ctnr > h2 {
     font-size: 2.5rem;
     margin-right: 10px;
@@ -2511,10 +2504,6 @@ FEATURES SECTION
   }
 }
 
-
-
-
-
 /*========================
 PRICE SECTION
 ========================*/
@@ -2565,6 +2554,8 @@ PRICE SECTION
 }
 .price-main-para {
   margin-top: 24px;
+  line-height: 2;
+  font-size: 0.875rem;
 }
 .price-main-para span {
   font-family: "europa", sans-serif;
@@ -2655,8 +2646,12 @@ PRICE SECTION
   max-height: 40px;
   align-self: end;
 }
+
 .price-discount-card .save-yen-btn span {
   font-size: 0.875rem;
+}
+.syb-clicked {
+  display: none !important;
 }
 
 /*=======================
@@ -2713,7 +2708,6 @@ SERVICE OVERVIEW SECTION
   background-color: #f5f5f5;
   padding: 20px;
 }
-
 
 /*=======================
 TEST CASE SECTION
@@ -2850,7 +2844,6 @@ WORKS SECTION
   z-index: 1;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2913,6 +2906,7 @@ WORKS SECTION
   margin-top: 8px;
   font-weight: 600;
   line-height: calc(24 / 16);
+  letter-spacing: 0;
 }
 .works-slider .works-slide-title p span {
   font-family: "europa", sans-serif;
@@ -2930,6 +2924,33 @@ WORKS SECTION
 }
 .works-slide-para span {
   font-family: "europa", sans-serif;
+}
+@media screen and (max-width: 768px) {
+  .works-section {
+    padding: 78px 15px 156px;
+    background-color: #f5f5f5;
+  }
+  .works-title h2 {
+    font-size: 2.5rem;
+  }
+  .works-slide {
+    max-width: 330px;
+    padding: 36px 15px 52px;
+  }
+  .works-slider .slick-arrow {
+    top: unset;
+    bottom: -76px;
+  }
+  .works-slider .slick-prev {
+    transform: translateX(-52px);
+  }
+  .works-slider .slick-next {
+    transform: translateX(12px);
+  }
+  .works-slider img {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 /*========================
@@ -2980,7 +3001,6 @@ OTHER MAIN SECTION
   }
 }
 
-
 /*========================
 FAQ SECTION
 ========================*/
@@ -2990,7 +3010,7 @@ FAQ SECTION
 .faq-ctnr {
   margin: 0 auto;
   max-width: 900px;
-  padding: 78px 20px 29px;
+  padding: 78px 20px 100px;
 }
 .faq-ctnr h2 {
   font-family: "europa", sans-serif;
@@ -3012,7 +3032,7 @@ FAQ SECTION
   height: 2px;
   width: 100%;
   background-color: #7a7a7a;
-  margin: 40px 0 16px;
+  margin: 20px 0 40px;
 }
 .faq-ctnr .question-line {
   margin-top: 24px;
@@ -3021,7 +3041,7 @@ FAQ SECTION
   display: flex;
   align-items: center;
   gap: 24px;
-  padding: 21px 24px;
+  padding: 21px 61px 21px 24px;
   position: relative;
 }
 .faq-ctnr .question-line h3 {
@@ -3032,6 +3052,7 @@ FAQ SECTION
 }
 .faq-ctnr .question-line p {
   font-weight: 700;
+  line-height: 1.5;
 }
 .faq-ctnr .question-line p span {
   font-family: "europa", sans-serif;
@@ -3051,12 +3072,19 @@ FAQ SECTION
   transform: translateY(-50%);
   right: 24px;
 }
+@media screen and (max-width: 768px) {
+  .faq-ctnr {
+    padding: 71px 15px 80px;
+  }
+  .faq-ctnr h2 {
+    font-size: 2.5rem;
+  }
+  .faq-ctnr .hor-line {
+    margin: 14px 0 24px;
+  }
+}
 
-
-
-
-
-/* HOME CONTACT SECTION */
+/* SERVICE CONTACT SECTION */
 .s-contact-wrapper {
   width: 100%;
   padding: 78px 20px 100px;
@@ -3064,7 +3092,7 @@ FAQ SECTION
 }
 .s-contact-section {
   border: solid 2px #feca00;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: #fff;
   position: relative;
   height: 100%;
@@ -3074,9 +3102,9 @@ FAQ SECTION
 }
 .s-contact-cards-ctnr {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0 48px;
+  justify-content: center;
+  align-items: start;
+  gap: 88px;
 }
 .s-contact-section .exit-btn {
   width: 50px;
@@ -3104,7 +3132,7 @@ FAQ SECTION
   height: 5px;
   max-width: 440px;
   width: 100%;
-  background: #fffbef;
+  background: #fff;
   display: block;
   position: absolute;
   top: -1.5px;
@@ -3115,32 +3143,23 @@ FAQ SECTION
   align-items: center;
   max-width: 160px;
 }
-.s-contact-card .icon-group {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 160px;
-}
-.s-contact-card .icon-group .circle {
-  position: absolute;
-  width: 120px;
-  height: 120px;
-}
-.s-contact-card .icon-group .icon {
-  position: absolute;
-  max-height: 55px;
-}
+
 .s-contact-card p {
-  margin-top: 4px;
+  margin-top: 15px;
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 0.75rem;
+  font-size: 1rem;
   line-height: 1.4;
   text-align: center;
+  font-weight: 600;
+  line-height: calc(30 / 16);
+  letter-spacing: 0;
+}
+.s-contact-card br {
+  display: none;
 }
 .s-contact-card span {
   color: #fea601;
+  font-weight: 700;
 }
 .s-contact-text {
   max-width: 640px;
@@ -3168,14 +3187,14 @@ FAQ SECTION
 .s-contact-main-button {
   flex: 4;
   background-color: #feca01;
-  max-height: 80px;
   text-align: center;
   padding: 28px 0;
+  line-height: 1.5;
 
   font-family: "Noto Sans JP", sans-serif;
-  font-size: calc(15 / 16 * 1rem);
+  font-size: 1rem;
   font-weight: 600;
-  border-radius: 40px;
+  border-radius: 25px;
   position: relative;
 }
 .s-contact-main-button::after {
@@ -3202,34 +3221,41 @@ FAQ SECTION
 }
 @media screen and (max-width: 768px) {
   .s-contact-wrapper {
-    padding: 71px 20px 80px;
+    display: none;
+    padding: 71px 15px 80px;
+    background-color: #fff;
   }
   .s-contact-section {
     padding: 51px 0 47px;
+    background-color: #fffbef;
   }
-
+  .s-contact-cards-ctnr {
+    gap: 30px;
+  }
   .s-contact-cards-ctnr > h2 {
-    font-size: calc(60 / 16 * 1rem);
+    font-size: 2.5rem;
   }
   .s-contact-cards-ctnr .no-border {
-    max-width: 357px;
+    max-width: 255px;
   }
   .s-contact-section .exit-btn {
     display: none;
   }
-  .s-contact-card {
-    max-width: 80px;
-  }
-  .s-contact-card .icon-group {
-    height: 60px;
-  }
-  .s-contact-card .icon-group .circle {
+  .s-contact-card img {
     width: 60px;
     height: 60px;
   }
-  .s-contact-card .icon-group .icon {
-    position: absolute;
-    max-height: 22px;
+  .s-contact-card p {
+    margin-top: 4px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    text-align: center;
+    font-weight: 600;
+    line-height: calc(30 / 16);
+  }
+  .s-contact-card br {
+    display: block;
   }
   .s-contact-text {
     font-size: 0.75rem;
@@ -3248,7 +3274,7 @@ FAQ SECTION
   .s-contact-ctnr {
     flex-direction: column;
     gap: 24px;
-    padding: 0 40px;
+    padding: 0 15px;
   }
   .s-contact-main-button {
     padding: 18px 0 18px 20px;
@@ -3260,15 +3286,110 @@ FAQ SECTION
     font-weight: 600;
   }
 }
-@media screen and (max-width: 480px) {
-  .s-contact-cards-ctnr > h2 {
+
+/*============================
+  REASON SECTION
+  ============================*/
+.reason-wrapper {
+  display: none;
+  padding: 71px 0 80px;
+  background-color: #f5f5f5;
+}
+.reason-main-ctnr {
+  max-width: 900px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.reason-main-ctnr h2 {
+  font-family: "europa", sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: calc(101 / 80);
+  color: #feca00;
+  display: inline-block;
+}
+.reason-main-ctnr h2 span {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: calc(30 / 16);
+  color: #000;
+  margin-left: 20px;
+}
+.reason-main-ctnr .hor-line {
+  height: 2px;
+  width: 100%;
+  background-color: #7a7a7a;
+  margin: 14px 0 17px;
+}
+.reason-main-ctnr .para-two {
+  margin-top: 38px;
+}
+.reason-main-ctnr .para-three {
+  margin-top: 43px;
+}
+.reason-title-line {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.reason-title-line img {
+  width: 16px;
+  height: 16px;
+}
+.reason-title-line h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #7a7a7a;
+  line-height: calc(36 / 16);
+}
+.reason-title-line h3 span {
+  padding: 0 7px 0 10px;
+  font-family: "europa", sans-serif;
+  font-size: calc(30 / 16 * 1rem);
+  font-weight: 700;
+  line-height: calc(36 / 30);
+}
+.reason-para {
+  font-size: 0.875rem;
+  line-height: 2;
+  letter-spacing: 0;
+}
+.reason-para b {
+  font-weight: 600;
+  font-size: 1rem;
+}
+.reason-para span {
+  font-family: "europa", sans-serif;
+}
+.reason-main-ctnr .reason-histo {
+  object-fit: contain;
+  margin-top: 27px;
+}
+@media screen and (max-width: 768px) {
+  .reason-wrapper {
+    display: block;
+  }
+  .reason-main-ctnr > h2 {
     font-size: 2.5rem;
   }
-  .s-contact-cards-ctnr .no-border {
-    max-width: 255px;
-  }
+}
 
-  .s-contact-ctnr {
-    padding: 0 15px;
+.hidden-at-pc {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .hidden-at-pc {
+    display: block;
+    padding: 71px 15px 80px;
+    background-color: #f5f5f5;
+  }
+  .hidden-at-pc .contact-ctnr {
+    padding: 0;
+  }
+  .hidden-at-pc .inputs-ctnr {
+    background-color: #fff;
   }
 }
+
+
